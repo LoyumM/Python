@@ -1,0 +1,12 @@
+INFO:root:This is my addition function
+INFO:root:1
+INFO:root:2
+INFO:root:3
+INFO:root:4
+INFO:root:5
+INFO:root:This is the start of the program
+INFO:root:User has entered: []
+INFO:root:Please check log for more information
+INFO:root:This is the start of the program
+INFO:root:User has entered: [3, 4, 5, 6]
+INFO:root:Please check log for more information
