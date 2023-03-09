@@ -1,0 +1,17 @@
+INFO:root:I am going to start my program
+WARNING:root:This is a warning
+ERROR:root:And this is an error. These are the different ways to create logs
+INFO:root:I am going to start my program
+WARNING:root:This is a warning
+ERROR:root:And this is an error. These are the different ways to create logs
+2023-03-09 15:26:20,092 I am going to start my program
+2023-03-09 15:26:21,649 This is a warning
+2023-03-09 15:26:25,164 And this is an error. These are the different ways to create logs
+2023-03-09 15:33:41,011 Error has occured
+2023-03-09 15:33:41,011 division by zero
+Traceback (most recent call last):
+  File "C:\Users\Loyumba\AppData\Local\Temp\ipykernel_9484\3625938761.py", line 3, in test
+    div = a/b
+ZeroDivisionError: division by zero
+2023-03-09 15:41:26,151 This is the start of a function
+2023-03-09 15:43:41,224 This is the start of a function
