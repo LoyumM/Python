@@ -1,0 +1,18 @@
+num = [0,2,0,0,0,0,1,0,0,0,2,0,0,2]
+
+two_pos = []
+one_pos = 0
+for i in range(len(num)):
+    if num[i] == 2:
+        two_pos.append(i)
+    elif num[i] == 1:
+        one_pos = i
+        
+# nearest = abs(two_pos[0] - one_pos)
+nearest = float('inf')
+for i in two_pos:
+    if abs(i - one_pos) <= nearest:
+        nearest = abs(i - one_pos)
+        
+print(f"The nearest distance between 1 and 2 is {nearest}")
+# print(abs(two_pos[0] - one_pos))
