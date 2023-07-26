@@ -1,4 +1,6 @@
 # Complete the solve function below.
+import os
+
 def solve(s):
     s = s.split(" ")
     for i in range(len(s)) :
