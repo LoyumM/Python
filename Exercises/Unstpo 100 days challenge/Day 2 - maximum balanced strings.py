@@ -44,6 +44,6 @@ def balanced_string_split(s):
     return "(" + ")(".join(result) + ")"
 
 # Test case
-input_str = "RLRRLLRLRL"
+input_str = input()
 output_str = balanced_string_split(input_str)
 print(output_str)
