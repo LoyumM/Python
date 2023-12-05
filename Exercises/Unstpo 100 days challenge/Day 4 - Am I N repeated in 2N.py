@@ -16,6 +16,6 @@ def repeated_2n(numbers:list, k:int):
             break
     return result_element
 
-k = int(input())
+k = int(input())    
 numbers = list(map(int, input().split()))
 print(repeated_2n(numbers, k))
