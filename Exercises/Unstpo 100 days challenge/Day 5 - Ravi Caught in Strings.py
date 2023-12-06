@@ -7,6 +7,7 @@ def max_palindromic_substring(s:str, n:int):
     for i in range(n):
         for j in range(n):
             sub_str = s[i:j+1]
+            print(sub_str)
             if sub_str == sub_str[::-1]:
                 max_palin.append(len(sub_str))
     return max(max_palin)
