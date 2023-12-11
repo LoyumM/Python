@@ -28,4 +28,4 @@ def count_consistent_cars(allowed_components, n, car_models):
 allowed_components = input()
 N = int(input())
 car_models = input().split()
-print(count_consistent_cars(allowed_components, N, car_models)
+print(count_consistent_cars(allowed_components, N, car_models))
