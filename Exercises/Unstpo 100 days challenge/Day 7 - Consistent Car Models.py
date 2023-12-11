@@ -1,18 +1,17 @@
 # First solution
 
-def count_consistent_cars(allowed_components, all_models, N)
-  counter = 0
-  for model in all_models:
-    for character in model:
-      if character not in allowed_string:
-        counter += 1
-  return N - counter
+def count_consistent_cars(allowed_components, all_models, N):
+    counter = 0
+    for model in all_models:
+        for character in model:
+            if character not in allowed_components:
+                counter += 1
+    return N - counter
 
-allowed_string = input()
+allowed_components = input()
 N = int(input())
 all_models = input().split()
 print(count_consistent_cars(allowed_components, all_models, N))
-
 
 ## using sets
 
