@@ -11,8 +11,7 @@ target = 10
 
 print(two_sum(lst, target))
 
-dictionary: O(n)
-
+# dictionary: O(n)
 def two_sum(input: list[int], target) -> list[int]:
     d = {}
     for i in range(len(input)):
