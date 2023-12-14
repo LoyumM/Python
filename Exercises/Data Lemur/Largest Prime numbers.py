@@ -12,23 +12,23 @@ def largest_prime_factor(target):
             break
         if is_prime and j > 1:
             prime_factors.append(j)
-    return max(list(set(prime_factors)))
+    return max(prime_factors)
 
 
 
-def largest_prime_factor(target):
-    max_prime_factor = 1
+def is_prime(number):
+    if number < 2:
+        return False
+    for i in range(2, int(number**0.5) + 1):
+        if number % i == 0:
+            return False 
+    return True 
 
-    while target % 2 == 0:
-        max_prime_factor = 2
-        target //= 2
-
-    for i in range(3, int(target**0.5) + 1, 2):
-        while target % i == 0:
-            max_prime_factor = i
-            target //= i
-
-    if target > 2:
-        max_prime_factor = target
-
-    return max_prime_factor
+def largest_prime_factor(target):  
+    for i in range(1,target):
+        if target%i == 0:
+            number = int(target/i)
+            if is_prime(number):
+                return number
+            
+print(largest_prime_factor(42))
