@@ -17,3 +17,12 @@ def trailing_zeros(n):
 print(trailing_zeros(5))
 print(trailing_zeros(10))
 print(trailing_zeros(130))
+
+# more efficient solution
+def trailing_zeroes(n):
+    count = 0
+    i = 5
+    while n // i > 0:
+        count += n // i
+        i *= 5
+    return count
