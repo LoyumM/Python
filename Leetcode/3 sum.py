@@ -6,7 +6,6 @@ class Solution:
 
         ans = []
 
-
         for i_idx in range(0, arrLength - 2):
             for j_idx in range(i_idx + 1, arrLength - 1):
                 for k_idx in range(j_idx + 1, arrLength):
