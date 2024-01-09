@@ -12,19 +12,28 @@ def max_product(arr:list):
             
     return max_product
 
-nums = [2, 3, -2, 4]
-print(max_product(nums))
+# nums = [2, 3, -2, 4]
+# print(max_product(nums))
 
 #time complexity O(n)
-def maxProduct(nums:list):
-    res = max(nums)
+class Solution:
+    def maxProduct(self, nums: list):
+        res = max(nums)
 
-    curMax, curMin = 1,1
+        curMax, curMin = 1,1
 
-    for num in nums:
-        tmp = curMax * num
-        curMax = max(curMax * num, curMin * num, num)
-        curMin = min(tmp, curMin * num, num)
-        res = max(res, curMax)
+        for num in nums:
+            tmp = curMax * num
+            curMax = max(curMax * num, curMin * num, num)
+            curMin = min(tmp, curMin * num, num)
+            res = max(res, curMax)
 
-    return res
+        return res
+
+nums = [2, 3, -2, 4]
+
+solution_instance = Solution()
+
+result = solution_instance.maxProduct(nums)
+
+print(result)
