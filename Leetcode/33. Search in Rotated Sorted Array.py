@@ -21,4 +21,4 @@ class Solution:
                 else: 
                     mid + 1
             
-        return mid
+        return -1
