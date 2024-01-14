@@ -15,3 +15,20 @@ height = [1, 8, 6, 2, 5, 4, 8, 3, 7]
 solution = Solution()
 result = solution.maxArea(height)
 print(result)
+
+# time complexity O(n)
+class Solution:
+    def maxArea(self, hit: List[int]) -> int:
+        mx = 0
+        i = 0
+        size = len(hit) - 1
+        while i < size:
+            dif = size - i
+            mn = min(hit[i], hit[size])
+            mx = max(mx, dif * mn)
+            
+            if hit[i] < hit[size]:
+                i += 1
+            else :
+                size -= 1
+        return mx
