@@ -18,7 +18,7 @@ print(result)
 
 # time complexity O(n)
 class Solution:
-    def maxArea(self, hit: List[int]) -> int:
+    def maxArea(self, hit: list[int]):
         mx = 0
         i = 0
         size = len(hit) - 1
@@ -32,3 +32,21 @@ class Solution:
             else :
                 size -= 1
         return mx
+    
+# suyesh's solution
+class Solution:
+    def maxArea(self, height: list):
+        breath = len(height) - 1
+        area = 0
+        idx_a = 0
+        idx_b = -1
+        for i in range(len(height)):
+            if height[idx_a] > height[idx_b]:
+                area = max(area,height[idx_b] * breath)
+                breath -= 1
+                idx_a += 1
+            else:
+                area = max(area,height[idx_a] * breath)
+                breath -= 1
+                idx_a -= 1
+        return area
