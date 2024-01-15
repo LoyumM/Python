@@ -27,22 +27,22 @@ class Solution:
             temp = one 
             one = one + two
             two = temp
-        return
+        return one
     
 # Example usage
 solution = Solution()
-stairs = []
-for i in range(0, 40):
+# stairs = []
+for i in range(0, 51):
     n = i
     output = solution.climbStairs(n)
     print(f"Output for n={n}: {output}")
-    stairs.append(output)
+    # stairs.append(output)
 
-import matplotlib.pyplot as plt
-# Plotting i on the y-axis and the corresponding number of ways on the x-axis
-plt.plot(range(40), stairs, marker='o', linestyle='-', color='blue')
-plt.title('Number of Ways to Climb Stairs')
-plt.xlabel('Target number')
-plt.ylabel('Number of Ways')
-plt.grid(True)
-# plt.show()
+# import matplotlib.pyplot as plt
+# # Plotting i on the y-axis and the corresponding number of ways on the x-axis
+# plt.plot(range(40), stairs, marker='o', linestyle='-', color='blue')
+# plt.title('Number of Ways to Climb Stairs')
+# plt.xlabel('Target number')
+# plt.ylabel('Number of Ways')
+# plt.grid(True)
+# # plt.show()
