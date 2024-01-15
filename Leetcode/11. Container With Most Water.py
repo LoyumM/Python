@@ -33,14 +33,14 @@ class Solution:
                 size -= 1
         return mx
     
-# suyesh's solution
+# suyesh's solution: O(n)
 class Solution:
     def maxArea(self, height: list):
         breath = len(height) - 1
         area = 0
         idx_a = 0
         idx_b = -1
-        for i in range(len(height)):
+        for _ in range(len(height)):
             if height[idx_a] > height[idx_b]:
                 area = max(area,height[idx_b] * breath)
                 breath -= 1
