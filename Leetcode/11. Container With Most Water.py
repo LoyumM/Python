@@ -42,11 +42,11 @@ class Solution:
         idx_b = -1
         for _ in range(len(height)):
             if height[idx_a] > height[idx_b]:
-                area = max(area,height[idx_b] * breath)
+                area = max(area, height[idx_b] * breath)
                 breath -= 1
                 idx_a += 1
             else:
-                area = max(area,height[idx_a] * breath)
+                area = max(area, height[idx_a] * breath)
                 breath -= 1
                 idx_a -= 1
         return area
