@@ -18,20 +18,20 @@ print(result)
 
 # time complexity O(n)
 class Solution:
-    def maxArea(self, hit: list[int]):
-        mx = 0
-        i = 0
-        size = len(hit) - 1
-        while i < size:
-            dif = size - i
-            mn = min(hit[i], hit[size])
-            mx = max(mx, dif * mn)
+    def maxArea(self, height: list[int]):
+        max_area = 0
+        start = 0
+        end = len(height) - 1
+        while start < end:
+            dif = end - start
+            min_height = min(height[start], height[end])
+            max_area = max(max_area, dif * min_height)
             
-            if hit[i] < hit[size]:
-                i += 1
+            if height[start] < height[end]:
+                start += 1
             else :
-                size -= 1
-        return mx
+                end -= 1
+        return max_area
     
 # suyesh's solution: O(n)
 class Solution:
@@ -48,5 +48,5 @@ class Solution:
             else:
                 area = max(area, height[idx_a] * breath)
                 breath -= 1
-                idx_a -= 1
+                idx_b -= 1
         return area
