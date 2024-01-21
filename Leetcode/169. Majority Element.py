@@ -17,3 +17,11 @@ class Solution:
 nums = [2,2,1,1,1,2,2]
 solution = Solution()
 print(solution.majorityElement(nums))
+
+# timc compelxity O(nlogn)
+# a little cheating
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        nums.sort()
+        n = len(nums)
+        return nums[n//2]
