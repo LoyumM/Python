@@ -10,10 +10,12 @@ class Solution:
                 start += 1
                 end += 1 
 
-        return sum(1 for element in nums if element != val)
+        return start
     
     
 nums = [0,1,2,2,3,0,4,2]
 # nums = [3,2,4,3]
 # val = 3
 val = 2
+solution = Solution()
+print(solution.removeElement(nums, val))
