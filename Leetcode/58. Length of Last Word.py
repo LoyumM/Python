@@ -22,11 +22,11 @@
 # variation of the efficient solution that works with all test cases    
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
-        length = 0
-        i = len(s) - 1
-        while i >= 0 and s[i] == ' ':
-            i -= 1
-        while i >= 0 and s[i] != ' ':
-            length += 1
-            i -= 1
-        return length
+        counter = 0
+        idx = len(s) - 1
+        while idx >= 0 and s[idx] == ' ':
+            idx -= 1
+        while idx >= 0 and s[idx] != ' ':
+            counter += 1
+            idx -= 1
+        return counter
