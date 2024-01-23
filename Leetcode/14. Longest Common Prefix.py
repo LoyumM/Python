@@ -15,3 +15,6 @@ def longest_common_prefix(strs):
 strs = ["flower", "flow", "flight"]
 result = longest_common_prefix(strs)
 print(result)
+
+# could be made faster if we sort the strings first, take the first and last word and compare the two only
+# which approach takes more time I think would depend on how many words there are
