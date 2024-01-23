@@ -6,4 +6,22 @@ def ispalindrome(s:str):
 
 print(ispalindrome(s))
 
-    
+# Two pointer solution: Consumes no extra memory
+class Solution:
+    def isPalindrome(self, s: str):
+        first = 0
+        end = len(s) - 1
+        while first < end:
+            if not s[first].isalnum():
+                first += 1
+            elif not s[end].isalnum():
+                end -= 1
+            elif s[first].lower() == s[end].lower():
+                first += 1
+                end -= 1
+            else:
+                return False
+        return True      
+        
+solution = Solution()
+print(solution.isPalindrome(s))
