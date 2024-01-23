@@ -12,7 +12,6 @@ def longest_common_prefix(strs):
         prefix = temp_prefix
     return prefix
 
-# Example usage
 strs = ["flower", "flow", "flight"]
 result = longest_common_prefix(strs)
 print(result)
