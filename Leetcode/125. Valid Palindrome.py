@@ -9,8 +9,7 @@ print(ispalindrome(s))
 # Two pointer solution: Consumes no extra memory
 class Solution:
     def isPalindrome(self, s: str):
-        first = 0
-        end = len(s) - 1
+        first, end =  0, len(s) - 1
         while first < end:
             if not s[first].isalnum():
                 first += 1
@@ -21,7 +20,7 @@ class Solution:
                 end -= 1
             else:
                 return False
-        return True      
+        return True    
         
 solution = Solution()
 print(solution.isPalindrome(s))
