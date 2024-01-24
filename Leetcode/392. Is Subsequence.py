@@ -1,4 +1,4 @@
-# First attempt: Doesnt pass all test cases
+# Decent enough two pointer solution
 def issubsequence(s, t):
     idx1, idx2 = 0, 0
     while idx2 < len(t):
