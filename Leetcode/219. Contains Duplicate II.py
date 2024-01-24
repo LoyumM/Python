@@ -11,7 +11,7 @@ print(containsNearbyDuplicate(nums, k))
 
 
 class Solution:
-    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+    def containsNearbyDuplicate(self, nums: list[int], k: int) -> bool:
         d1 = {}
         for key, val in enumerate(nums):
             if val not in d1:
@@ -22,4 +22,16 @@ class Solution:
                 else:
                     d1[val] = key
 
+        return False
+    
+ 
+# same solution but a little neater    
+class Solution:
+    def containsNearbyDuplicate(self, nums: list[int], k: int) -> bool:
+        d = {}
+        for idx, value in enumerate(nums):
+            if value in d and abs(d.get(value) - idx) <= k:
+                return True
+            else:
+                d[value] = idx
         return False
