@@ -33,15 +33,23 @@ Hint: Sliding window
 # nums = [2,3,1,2,4,3]
 nums = [1,1,1,1,1,1,1,1]
 target = 11
-# print(minSubArrayLen(target, nums))
-# print(nums)
-# nums.sort(reverse=True)
-# sum = 0
-# for idx, value in enumerate(nums):
-#     sum += value
-#     if sum >= target:
-#         print(idx + 1)
-#         break
+
+# sliding window solution
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        start = 0
+        min_length = float('inf')
+        current_sum = 0
+
+        for end in range(len(nums)):
+            current_sum += nums[end]
+
+            while current_sum >= target:
+                min_length = min(min_length, end - start + 1)
+                current_sum -= nums[start]
+                start += 1
+
+        return min_length if min_length != float('inf') else 0
 
 '''
 Brute force: Check every combination. 
