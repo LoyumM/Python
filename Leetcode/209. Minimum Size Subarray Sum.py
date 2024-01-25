@@ -19,21 +19,21 @@ Attempt: To find a O(n log(n)) time complexity solution
 Hint: Sliding window
 '''
 
-def minSubArrayLen(target:int, nums: list):
-    nums.sort(reverse=True)
-    sum = 0
-    for idx, value in enumerate(nums):
-        sum += value
-        if sum >= target:
-            return idx + 1
-            break
-    return 0
+# def minSubArrayLen(target:int, nums: list):
+#     nums.sort(reverse=True)
+#     sum = 0
+#     for idx, value in enumerate(nums):
+#         sum += value
+#         if sum >= target:
+#             return idx + 1
+#             break
+#     return 0
 
 # target = 7
 # nums = [2,3,1,2,4,3]
 nums = [1,1,1,1,1,1,1,1]
 target = 11
-print(minSubArrayLen(target, nums))
+# print(minSubArrayLen(target, nums))
 # print(nums)
 # nums.sort(reverse=True)
 # sum = 0
@@ -46,4 +46,5 @@ print(minSubArrayLen(target, nums))
 '''
 Brute force: Check every combination. 
 First solution: sort list. Go from largest to smallest. Keep adding each element till sum >= target
+        Sorting changes the order, hence doesnt work
 '''
