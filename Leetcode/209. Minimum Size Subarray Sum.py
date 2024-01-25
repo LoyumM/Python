@@ -20,10 +20,28 @@ Hint: Sliding window
 '''
 
 def minSubArrayLen(target:int, nums: list):
-    pass
+    nums.sort(reverse=True)
+    sum = 0
+    for idx, value in enumerate(nums):
+        sum += value
+        if sum >= target:
+            return idx + 1
+            break
+    return 0
 
-target = 7
-nums = [2,3,1,2,4,3]
+# target = 7
+# nums = [2,3,1,2,4,3]
+nums = [1,1,1,1,1,1,1,1]
+target = 11
+print(minSubArrayLen(target, nums))
+# print(nums)
+# nums.sort(reverse=True)
+# sum = 0
+# for idx, value in enumerate(nums):
+#     sum += value
+#     if sum >= target:
+#         print(idx + 1)
+#         break
 
 '''
 Brute force: Check every combination. 
