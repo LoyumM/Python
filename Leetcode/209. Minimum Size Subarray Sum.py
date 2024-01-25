@@ -19,8 +19,13 @@ Attempt: To find a O(n log(n)) time complexity solution
 Hint: Sliding window
 '''
 
-def minSubArrayLen(target: int, nums: list[int]):
+def minSubArrayLen(target:int, nums: list):
     pass
 
 target = 7
 nums = [2,3,1,2,4,3]
+
+'''
+Brute force: Check every combination. 
+First solution: sort list. Go from largest to smallest. Keep adding each element till sum >= target
+'''
