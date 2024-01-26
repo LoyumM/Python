@@ -36,7 +36,7 @@ target = 11
 
 # sliding window solution
 class Solution:
-    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+    def minSubArrayLen(self, target: int, nums: list):
         start = 0
         min_length = float('inf')
         current_sum = 0
