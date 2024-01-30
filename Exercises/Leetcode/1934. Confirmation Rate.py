@@ -10,10 +10,19 @@ confirmations = pd.DataFrame(data, columns=['user_id', 'time_stamp', 'action']).
 
 
 # def confirmation_rate(signups: pd.DataFrame, confirmations: pd.DataFrame) -> pd.DataFrame:
-df = pd.merge(signups, confirmations, on = 'user_id', how = 'left')[['user_id','action']]
-df = df.fillna(0)
-df.groupby('user_id')['action'].apply(lambda x: x[x == 'confirmed'].count())
-df.groupby('user_id').size()
-# return pd.DataFrame(df)
+# df = pd.merge(signups, confirmations, on = 'user_id', how = 'left')[['user_id','action']]
+# df = df.fillna(0)
+# df['confirmed_count'] = df.groupby('user_id')['action'].apply(lambda x: x[x == 'confirmed'].count())
+# df['count'] = df.groupby('user_id').size()
+# # return pd.DataFrame(df)
 
-print()
+# print(df)
+
+def confirmation_rate(signups: pd.DataFrame, confirmations: pd.DataFrame):
+    df1 = confirmations.groupby('user_id')['action'].count().reset_index()
+    df2 = confirmations.groupby('user_id')['action'].apply(lambda x: x[x == 'confirmed'].count()).reset_index()
+    df = signups.merge(df1, how = 'left').merge(df2 , how = 'left', on = 'user_id')
+    df['confirmation_rate'] = ((df.action_y)/ (df.action_x)).round(2)   
+    return df.iloc[:,[0,4]].fillna(0)
+
+print(confirmation_rate(signups, confirmations))
