@@ -1,21 +1,16 @@
 # Brute Force
 # TC: O(n*n*n)
 class Solution:
-    def threeSum(self, nums:list):
-        arrLength = len(nums)
-
-        ans = []
-
-        for i_idx in range(0, arrLength - 2):
-            for j_idx in range(i_idx + 1, arrLength - 1):
-                for k_idx in range(j_idx + 1, arrLength):
-                    if nums[i_idx] + nums[j_idx] + nums[k_idx] == 0:
-                        # Sort the triplet and add it to the result if not already present
-                        triplet = sorted([nums[i_idx], nums[j_idx], nums[k_idx]])
-                        
-                        if triplet not in ans:
-                            ans.append(triplet)
-
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        ans=set()
+        nums.sort()
+        n=len(nums)
+        for i in range(n-2):
+            for j in range(i+1,n-1):
+                for k in range(j+1,n):
+                    temp=nums[i]+nums[j]+nums[k]
+                    if temp==0:
+                        ans.add((nums[i],nums[j],nums[k]))
         return ans
 
 # Two pointer
@@ -56,3 +51,4 @@ class Solution:
                     end -= 1
 
         return ans
+    
