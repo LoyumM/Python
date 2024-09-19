@@ -22,7 +22,7 @@ class Solution:
             else:
                 return False
         
-        return stack == []
+        return stack == [] 
         
 
 s = "()[]{}"
