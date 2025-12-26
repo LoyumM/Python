@@ -4,8 +4,6 @@ class Solution:
         max = 0
         for idx in range(len(nums)-k):
             average = sum(nums[idx:idx+k])/k
-            print(nums[idx:idx+k])
-            print(idx, average)
             if average > max:
                 max = average
         return max
